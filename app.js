@@ -26,6 +26,6 @@ app.use('/user',express.json(),userRouter);
 //admin
 app.use('/admin',express.json(),adminRouter);
 
-app.listen(PORT,()=>{
+app.listen(PORT || 3000,()=>{
     console.log(`Server running on ${PORT}`)
 })
