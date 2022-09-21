@@ -4,6 +4,7 @@ const registerValidate = ( data ) => {
     const schema = Joi.object({
         name : Joi.string().required().min(3).max(50),
         email : Joi.string().required().min(3).max(50),
+        phone: Joi.string().min(10).max(16),
         cpf : Joi.string().required().min(11).max(17),
         password : Joi.string().required().min(6).max(100),
     });

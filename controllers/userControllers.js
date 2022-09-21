@@ -24,6 +24,7 @@ const userController = {
             name: req.body.name,
             email: req.body.email,
             cpf: req.body.cpf,
+            phone: req.body.phone,
             admin: req.body.admin,
             password: bcrypt.hashSync(req.body.password)
         });
