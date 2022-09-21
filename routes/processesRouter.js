@@ -4,6 +4,7 @@ const router = express.Router();
 
 //get
 router.get("/", processController.all);
+router.get("/:id", processController.getForParams);
 
 // router.get("/processos/:id", processController.getForParams);
 

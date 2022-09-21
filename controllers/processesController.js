@@ -42,6 +42,16 @@ const processController = {
                         }
                     })
             
+    },
+    getForParams: (req, res)=>{
+        ProcessModel.findById((req.params.id),
+        (err,data)=>{
+            if(err){
+                console.log(err)
+            }else{
+                res.send(data);
+            }
+        })
     }
 };
 
