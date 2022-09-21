@@ -4,6 +4,7 @@ const app = express();
 const PORT = process.env.PORT;
 const userRouter = require('./routes/userRouter');
 const adminRouter = require('./routes/adminRouter');
+const processesRouter = require('./routes/processesRouter');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
@@ -19,7 +20,7 @@ mongoose.connect(process.env.MONGO_CONNECTION_URL,
 //cors
 app.use(cors(whiteList));
 //api
-app.use("/api", express.urlencoded({extended: true}), userRouter);
+app.use("/processos", express.urlencoded({extended: true}), processesRouter);
 //user
 app.use('/user',express.json(),userRouter);
 //admin
