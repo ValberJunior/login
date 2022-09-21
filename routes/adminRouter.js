@@ -9,7 +9,7 @@ router.get('/', auth , (req,res) => {
      } 
     else{
          res.status(401).send('Access Denied!')
-    };
+    }; 
 });
 
 module.exports = router;
